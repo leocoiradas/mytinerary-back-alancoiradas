@@ -1,0 +1,33 @@
+{
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "mongoose": "^7.4.3"
+  },
+  "name": "mytinerary-back-alancoiradas",
+  "version": "1.0.0",
+  "description": "In this proyect we'll create te conection to the database using Express for the routing and MongoDB to store the data. We're going to create the schema of the data that will be stored in the DB ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leocoiradas/mytinerary-back-alancoiradas.git"
+  },
+  "keywords": [
+    "backend",
+    "web development",
+    "express",
+    "mongodb",
+    "CRUD",
+    "server",
+    "node.js"
+  ],
+  "author": "Alan Coiradas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leocoiradas/mytinerary-back-alancoiradas/issues"
+  },
+  "homepage": "https://github.com/leocoiradas/mytinerary-back-alancoiradas#readme"
+}
