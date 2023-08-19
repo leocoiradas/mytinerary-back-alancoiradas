@@ -4,10 +4,10 @@ import citiesController  from "../controllers/cities.controller.js";
 
 const router = express.Router()
 
-router.get('/cities', citiesController.getCities )
-router.get('/cities:id', citiesController.getCityById)
-router.post('/cities', citiesController.createCity)
-router.put('/cities', citiesController.updateCity)
-router.delete('/cities', citiesController.deleteCity)
+router.get('/', citiesController.getCities )
+router.get('/:id', citiesController.getCityById)
+router.post('/', citiesController.createCity)
+router.put('/', citiesController.updateCity)
+router.delete('/', citiesController.deleteCity)
 
 export default router

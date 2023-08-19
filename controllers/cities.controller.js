@@ -5,11 +5,11 @@ const citiesController = {
     getCities: async (req, res) => {
         console.log(req.query)
         let searchQueries = {};
-        if (req.queries.name){
+        if (req.query.name){
             searchQueries.name = req.query.name
         }
         try {
-            const citiesSearch = await Cities.find(req.query)
+            const citiesSearch = await Cities.find(searchQueries)
             return res.status(200).json({
                 success: true,
                 cities : citiesSearch
