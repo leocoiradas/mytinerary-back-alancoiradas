@@ -16,7 +16,7 @@ const citiesController = {
             })
         } catch (error) {
             console.log(error);
-            res.status(500).json({
+           return res.status(500).json({
                 success: false,
                 message: 'No cities were found'
             })
@@ -28,14 +28,14 @@ const citiesController = {
         
         try {
             const eventById = await Cities.findById(req.query.id)
-            res.status(200).json({
+           return res.status(200).json({
                 success: true,
                 message: 'City found',
                 eventById: eventById
             })
         } catch (error) {
             console.log(error);
-            res.status(500).json({
+            return res.status(500).json({
                 success: false,
                 message: 'We could not found any city with the provided ID'
             })
@@ -44,14 +44,14 @@ const citiesController = {
     createCity: async (req, res) => {
         try {
             const newCity = await Cities.create(req.body);
-            res.status(201).json({
+           return res.status(201).json({
                 success: true,
                 message: 'City created succesfully',
                 newCity: newCity
             })
         } catch (error) {
             console.log(error);
-            res.status(500).json({
+           return res.status(500).json({
                 success: false,
                 message: 'The city could not be created'
             })
@@ -66,14 +66,14 @@ const citiesController = {
                 img: req.body.newImg,
                 country: req.body.newCountry
             }, { new: true })
-            res.status(201).json({
+           return res.status(201).json({
                 success: true,
                 message: 'City Updated succesfully',
                 updatedCity: updatedCity
             })
         } catch (error) {
             console.log(error)
-            res.status(500).json({
+           return res.status(500).json({
                 success: false,
                 message: 'The city could not be updated correctly'
                 
@@ -89,13 +89,13 @@ const citiesController = {
                     message: 'We could not find and delete the city you are looking for'
                 })
             }
-            res.status(200).json({
+           return res.status(200).json({
                 success: true,
                 message: 'City deleted succesfully'
             })
         } catch (error) {
             console.log(error)
-            res.status(500).json({
+           return res.status(500).json({
                 success: false,
                 message: 'The city could not be deleted'
             })
