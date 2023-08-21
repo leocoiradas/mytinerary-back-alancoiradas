@@ -5,12 +5,12 @@ const citiesController = {
     getCities: async (req, res) => {
         console.log(req.query)
        let searchQueries = {};
-        if (req.query.name) {
-            searchQueries.name = new RegExp(`^${req.query.name}`, 'i');
+        if (req.query.cityName) {
+            searchQueries.cityName = new RegExp(`^${req.query.cityName}`, 'i');
         }
-        if(req.query.category){
+        /*if(req.query.category){
             searchQueries.category = req.query.category
-        }
+        }*/
         try {
             const citiesSearch = await Cities.find(searchQueries)
             if(citiesSearch.length > 0){
