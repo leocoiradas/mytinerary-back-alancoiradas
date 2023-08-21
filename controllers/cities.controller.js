@@ -4,16 +4,27 @@ import Cities from '../models/Cities.js';
 const citiesController = {
     getCities: async (req, res) => {
         console.log(req.query)
-        let searchQueries = {};
-        if (req.query.name){
-            searchQueries.name = req.query.name
+       let searchQueries = {};
+        if (req.query.name) {
+            searchQueries.name = new RegExp(`^${req.query.name}`, 'i');
+        }
+        if(req.query.category){
+            searchQueries.category = req.query.category
         }
         try {
             const citiesSearch = await Cities.find(searchQueries)
-            return res.status(200).json({
-                success: true,
-                cities : citiesSearch
+            if(citiesSearch.length > 0){
+                return res.status(200).json({
+                    success: true,
+                    cities : citiesSearch
+                });
+            }
+            return res.status(404).json({
+                success: false,
+                message: 'Cities not found',
+                cities: citiesSearch
             })
+            
         } catch (error) {
             console.log(error);
            return res.status(500).json({
@@ -27,12 +38,21 @@ const citiesController = {
         console.log(req.query)
         
         try {
-            const eventById = await Cities.findById(req.query.id)
-           return res.status(200).json({
-                success: true,
-                message: 'City found',
-                eventById: eventById
+            const eventById = await Cities.findById(req.params.id)
+
+            if(eventById){
+                return res.status(200).json({
+                    success: true,
+                    message: 'City found',
+                    eventById: eventById
+                })
+            }
+
+            return res.status(404).json({
+                success: false,
+                message: 'No event could be found with the provided ID, please try again'
             })
+           
         } catch (error) {
             console.log(error);
             return res.status(500).json({
@@ -44,7 +64,7 @@ const citiesController = {
     createCity: async (req, res) => {
         try {
             const newCity = await Cities.create(req.body);
-           return res.status(201).json({
+           return res.status(200).json({
                 success: true,
                 message: 'City created succesfully',
                 newCity: newCity
