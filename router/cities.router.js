@@ -8,6 +8,6 @@ router.get('/', citiesController.getCities )
 router.get('/:id', citiesController.getCityById)
 router.post('/', citiesController.createCity)
 router.put('/:id', citiesController.updateCity)
-router.delete('/', citiesController.deleteCity)
+router.delete('/:id', citiesController.deleteCity)
 
 export default router

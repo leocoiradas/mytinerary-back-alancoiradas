@@ -102,7 +102,7 @@ const citiesController = {
     },
     deleteCity: async (req, res) => {
         try {
-            const deletedCity = await Cities.findOneAndDelete(req.query)
+            const deletedCity = await Cities.findByIdAndDelete(req.params.id)
             if (!deletedCity){
                 return res.status(404).json({
                     success: false,
