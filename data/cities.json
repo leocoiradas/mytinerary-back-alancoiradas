@@ -2,67 +2,136 @@
     {
         "cityName": "Tokyo",
         "img": "https://s1.1zoom.me/b4846/948/Japan_Tokyo_Rivers_Bridges_Spring_Flowering_trees_551769_2560x1440.jpg",
-        "country": "Japan"
+        "country": "Japan",
+        "desc": "Tokyo, a vibrant metropolis, blends tradition and modernity, offering a glimpse into Japanese culture and technology.",
+        "touristSpots": "Visit the Senso-ji Temple, explore Shibuya Crossing, and experience the nightlife in Shinjuku.",
+        "gastronomy": "Savor sushi, ramen, and other authentic Japanese dishes in Tokyo's diverse food scene.",
+        "currency": "Japanese Yen (JPY)"
     },
     {
         "cityName": "Paris",
         "img": "https://c4.wallpaperflare.com/wallpaper/307/881/285/eiffel-tower-paris-france-wallpaper-preview.jpg",
-        "country": "France"
+        "country": "France",
+        "desc": "Paris, the 'City of Love,' boasts iconic landmarks, world-class art, and a romantic atmosphere.",
+        "touristSpots": "Visit the Eiffel Tower, explore the Louvre Museum, and take a stroll along the Seine River.",
+        "gastronomy": "Indulge in French cuisine with croissants, escargot, and exquisite pastries.",
+        "currency": "Euro (EUR)"
     },
     {
         "cityName": "Rome",
         "img": "https://cdn.pixabay.com/photo/2016/02/04/13/01/colosseum-1179159_960_720.jpg",
-        "country": "Italy"
+        "country": "Italy",
+        "desc": "Rome, the Eternal City, is a treasure trove of ancient history, art, and architecture.",
+        "touristSpots": "Explore the Colosseum, visit the Vatican City, and make a wish at the Trevi Fountain.",
+        "gastronomy": "Delight in Italian classics like pasta, pizza, gelato, and fine wines.",
+        "currency": "Euro (EUR)"
     },
     {
         "cityName": "Sydney",
         "img": "https://th.bing.com/th/id/OIP.93I5x7vntNZ5eHLdFuwSvQHaE8?pid=ImgDet&rs=1",
-        "country": "Australia"
+        "country": "Australia",
+        "desc": "Sydney, with its iconic Opera House and stunning harbor, is a gateway to Australia's natural wonders.",
+        "touristSpots": "Visit the Sydney Opera House, explore the Sydney Harbour Bridge, and relax at Bondi Beach.",
+        "gastronomy": "Taste fresh seafood and experience multicultural cuisine in Sydney's diverse food scene.",
+        "currency": "Australian Dollar (AUD)"
     },
     {
         "cityName": "Rio de Janeiro",
         "img": "https://pixabay.com/static/uploads/photo/2015/06/14/23/35/rio-de-janeiro-809756_960_720.jpg",
-        "country": "Brazil"
+        "country": "Brazil",
+        "desc": "Rio de Janeiro, known for its stunning beaches and vibrant culture, captures the essence of Brazil.",
+        "touristSpots": "Visit Christ the Redeemer, enjoy Copacabana and Ipanema beaches, and explore Sugarloaf Mountain.",
+        "gastronomy": "Experience Brazilian cuisine with feijoada, churrasco, and tropical fruits.",
+        "currency": "Brazilian Real (BRL)"
     },
     {
         "cityName": "Cairo",
-        "img": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fviajareaegipto.com%2Fel-cairo%2F&psig=AOvVaw24cdfY8rtooChxmzxXHD1d&ust=1692757838274000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCLC1rcSc74ADFQAAAAAdAAAAABAF",
-        "country": "Egypt"
+        "img": "https://c2.staticflickr.com/2/1390/5146069762_05010b2585_b.jpg",
+        "country": "Egypt",
+        "desc": "Cairo, home to the iconic pyramids and Sphinx, is a blend of ancient history and bustling urban life.",
+        "touristSpots": "Explore the Giza Pyramids, visit the Egyptian Museum, and experience the Khan el-Khalili market.",
+        "gastronomy": "Savor Egyptian dishes like koshari, falafel, and traditional sweets.",
+        "currency": "Egyptian Pound (EGP)"
     },
     {
         "cityName": "London",
         "img": "https://www.publicdomainpictures.net/pictures/230000/nahled/london-cityscape.jpg",
-        "country": "United Kingdom"
+        "country": "United Kingdom",
+        "desc": "London, a global city steeped in history, offers a mix of modernity, culture, and historic landmarks.",
+        "touristSpots": "Visit the British Museum, explore the Tower of London, and take a ride on the London Eye.",
+        "gastronomy": "Enjoy everything from traditional English breakfast to global cuisine.",
+        "currency": "British Pound (GBP)"
     },
     {
         "cityName": "New York City",
         "img": "https://th.bing.com/th/id/R.548b63174248d4ee01491c8d84845174?rik=klHR49XBtQ8VJg&pid=ImgRaw&r=0",
-        "country": "United States"
+        "country": "United States",
+        "desc": "New York City, the city that never sleeps, is a hub of culture, art, and business, with iconic sites like Times Square and Central Park.",
+        "touristSpots": "Explore Times Square, visit the Statue of Liberty, and walk through Central Park.",
+        "gastronomy": "Indulge in diverse cuisines from around the world, as NYC is a melting pot of flavors.",
+        "currency": "US Dollar (USD)"
     },
     {
         "cityName": "Mar del Plata",
-        "img": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fintriper.com%2Fargentina-las-playas-de-mar-del-plata-podrian-volver-a-recibir-turistas-a-partir-de-septiembre%2F&psig=AOvVaw2eomOanEiYX5bg5HUZI-xY&ust=1692758083917000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCLCcibSd74ADFQAAAAAdAAAAABAJ",
-        "country": "Argentina"
+        "img": "https://www.goodfreephotos.com/cache/argentina/other-argentina/beach-and-crowd-mar-del-plata-argentina.jpg",
+        "country": "Argentina",
+        "desc": "Mar del Plata, a popular beach destination, offers a mix of seaside beauty, entertainment, and vibrant nightlife.",
+        "touristSpots": "Enjoy the beaches, explore the Aquarium, and visit the Casino Central.",
+        "gastronomy": "Savor seafood, Argentine barbecue, and delicious empanadas.",
+        "currency": "Argentine Peso (ARS)"
     },
     {
         "cityName": "Beijing",
-        "img": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.voyage-prive.es%2Fppl%2Fviajes-china-beijing-paisajes-de-china%2F42233&psig=AOvVaw0OKhkoADu9GMJObdIDmybH&ust=1692758209748000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCOiRh_Cd74ADFQAAAAAdAAAAABAE",
-        "country": "China"
+        "img": "https://c2.staticflickr.com/8/7311/11478710913_bb2506b43c_b.jpg",
+        "country": "China",
+        "desc": "Beijing, the capital of China, is a blend of ancient history and modern development, featuring iconic landmarks like the Great Wall and the Forbidden City.",
+        "touristSpots": "Walk the Great Wall, explore the Forbidden City, and visit the Temple of Heaven.",
+        "gastronomy": "Delight in Beijing's culinary offerings, including Peking duck, dim sum, and street food delights.",
+        "currency": "Chinese Yuan Renminbi (CNY)"
     },
     {
         "cityName": "Madrid",
-        "img": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fmegustavolar.iberia.com%2F2021%2F09%2F09%2Fpaisaje-de-luz-celebrando-el-primer-patrimonio-mundial-de-madrid%2F&psig=AOvVaw32EtJ-3uDhDsr5t4TXSxs9&ust=1692758244446000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCMiuwICe74ADFQAAAAAdAAAAABAE",
-        "country": "Spain"
+        "img": "https://www.cvc.com.br/dicas-de-viagem/wp-content/uploads/2021/06/Madrid-1170x650.jpg",
+        "country": "Spain",
+        "desc": "Madrid, the lively capital of Spain, enchants visitors with its historic architecture, vibrant arts scene, and energetic street life.",
+        "touristSpots": "Visit the Royal Palace, explore the Prado Museum, and relax at Retiro Park.",
+        "gastronomy": "Indulge in Spanish cuisine with tapas, paella, and churros.",
+        "currency": "Euro (EUR)"
     },
     {
         "cityName": "Vancouver",
-        "img": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fgrowproexperience.com%2Fcanada%2Fque-ver-en-vancouver%2F&psig=AOvVaw0d9Vwnz8pOEsmlS5_6GNWw&ust=1692758281650000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCKjNn5Ke74ADFQAAAAAdAAAAABAE",
-        "country": "Canada"
+        "img": "https://th.bing.com/th/id/R.9a4a848cb8647e32b6ca7fd874a76f66?rik=lRzgjUGGbBxkvQ&riu=http%3a%2f%2fawoisoak.com%2fwp-content%2fuploads%2f2017%2f11%2fdsc08915_lzn.jpg&ehk=hKfJkS1%2fMt0jXhF5bHhQ63NBDYTfC9dgNo1xgWKuTKY%3d&risl=&pid=ImgRaw&r=0",
+        "country": "Canada",
+        "desc": "Vancouver, surrounded by mountains and water, is a vibrant city known for its stunning natural scenery and diverse cultural scene.",
+        "touristSpots": "Explore Stanley Park, visit Granville Island, and take in panoramic views from Grouse Mountain.",
+        "gastronomy": "Enjoy a mix of global cuisines, from fresh seafood to international fusion.",
+        "currency": "Canadian Dollar (CAD)"
     },
     {
         "cityName": "Mexico City",
-        "img": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pexels.com%2Fes-es%2Ffoto%2Ffoto-aerea-del-paisaje-de-la-ciudad-de-mexico-y-el-monumento-emblematico-de-la-ciudad-angel-de-la-independencia-al-atardecer-14071000%2F&psig=AOvVaw26EBPdPt_E73SKBjdhVXKH&ust=1692758315637000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCMjwwaKe74ADFQAAAAAdAAAAABAE",
-        "country": "Mexico"
+        "img": "https://ak6.picdn.net/shutterstock/videos/24245336/thumb/1.jpg",
+        "country": "Mexico",
+        "desc": "Mexico City, one of the largest cities in the world, offers a mix of history, culture, and vibrant street life, along with ancient ruins and colonial architecture.",
+        "touristSpots": "Visit the historic center, explore Teotihuacan, and enjoy the beauty of Chapultepec Park.",
+        "gastronomy": "Indulge in Mexican cuisine, from street tacos and mole to traditional dishes like chiles en nogada.",
+        "currency": "Mexican Peso (MXN)"
+    },
+    {
+        "cityName": "Dubai",
+        "img": "https://th.bing.com/th/id/R.235b5c5cf8188fec98b814b0fe1e4f13?rik=tLAqXTPwdUhhKA&pid=ImgRaw&r=0",
+        "country": "United Arab Emirates",
+        "desc": "Dubai, a futuristic oasis in the desert, is known for its extravagant architecture, luxury shopping, and cosmopolitan lifestyle.",
+        "touristSpots": "Visit the Burj Khalifa, explore the Dubai Mall, and experience the desert safari.",
+        "gastronomy": "Enjoy a mix of Middle Eastern, Asian, and international cuisine in Dubai's culinary scene.",
+        "currency": "UAE Dirham (AED)"
+    },
+    {
+        "cityName": "Seoul",
+        "img": "https://live.staticflickr.com/225/478469027_0b1e7a98f4.jpg",
+        "country": "South Korea",
+        "desc": "Seoul, a dynamic metropolis, seamlessly blends modernity and tradition, offering a mix of high-tech attractions and historic palaces.",
+        "touristSpots": "Explore Gyeongbokgung Palace, shop in Myeongdong, and visit the vibrant Gangnam district.",
+        "gastronomy": "Delight in Korean cuisine, including kimchi, bulgogi, and savory street food.",
+        "currency": "South Korean Won (KRW)"
     }
 ]
-
