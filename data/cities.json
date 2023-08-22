@@ -1,0 +1,77 @@
+[
+    {
+        "name": "Tokyo",
+        "country": "Japan",
+        "img": "src/assets/data-images/Tokyo-image.jpg"
+    },
+    {
+        "name": "New York City",
+        "country": "United States",
+        "img": "src/assets/data-images/NewYork-image.jpg"
+    },
+    {
+        "name": "London",
+        "country": "United Kingdom",
+        "img": "src/assets/data-images/London-image.jpg"
+    },
+    {
+        "name": "Paris",
+        "country": "France",
+        "img": "src/assets/data-images/Paris-image.png"
+    },
+    {
+        "name": "Rome",
+        "country": "Italy",
+        "img": "src/assets/data-images/Rome-image.jpg"
+    },
+    {
+        "name": "Sydney",
+        "country": "Australia",
+        "img": "src/assets/data-images/Sydney-image.jpg"
+    },
+    {
+        "name": "Rio de Janeiro",
+        "country": "Brazil",
+        "img": "src/assets/data-images/Rio-image.jpg"
+    },
+    {
+        "name": "Cairo",
+        "country": "Egypt",
+        "img": "src/assets/data-images/Cairo-image.jpg"
+    },
+    {
+        "name": "Dubai",
+        "country": "United Arab Emirates",
+        "img": "src/assets/data-images/Dubai-image.jpg"
+    },
+    {
+        "name": "Seoul",
+        "country": "South Korea",
+        "img": "src/assets/data-images/Seoul-image.jpg"
+    },
+    {
+        "name": "Mar del Plata",
+        "country": "Argentina",
+        "img": "src/assets/data-images/MarDelPlata-image.jpg"
+    },
+    {
+        "name": "Beijing",
+        "country": "China",
+        "img": "src/assets/data-images/Beijing-image.jpg"
+    },
+    {
+        "name": "Madrid",
+        "country": "Spain",
+        "img": "src/assets/data-images/Madrid-image.jpg"
+    },
+    {
+        "name": "Vancouver",
+        "country": "Canada",
+        "img": "src/assets/data-images/Vancouver-image.jpg"
+    },
+    {
+        "name": "Mexico City",
+        "country": "Mexico",
+        "img": "src/assets/data-images/MexicoCity-image.jpg"
+    }
+]

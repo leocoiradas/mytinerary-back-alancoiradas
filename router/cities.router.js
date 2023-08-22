@@ -7,7 +7,7 @@ const router = express.Router()
 router.get('/', citiesController.getCities )
 router.get('/:id', citiesController.getCityById)
 router.post('/', citiesController.createCity)
-router.put('/', citiesController.updateCity)
+router.put('/:id', citiesController.updateCity)
 router.delete('/', citiesController.deleteCity)
 
 export default router
