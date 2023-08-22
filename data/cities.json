@@ -1,77 +1,77 @@
 [
     {
-        "name": "Tokyo",
+        "cityName": "Tokyo",
         "country": "Japan",
-        "img": "src/assets/data-images/Tokyo-image.jpg"
+        "img": "https://s1.1zoom.me/b4846/948/Japan_Tokyo_Rivers_Bridges_Spring_Flowering_trees_551769_2560x1440.jpg"
     },
     {
-        "name": "New York City",
+        "cityName": "New York City",
         "country": "United States",
-        "img": "src/assets/data-images/NewYork-image.jpg"
+        "img": "https://th.bing.com/th/id/R.548b63174248d4ee01491c8d84845174?rik=klHR49XBtQ8VJg&pid=ImgRaw&r=0"
     },
     {
-        "name": "London",
+        "cityName": "London",
         "country": "United Kingdom",
-        "img": "src/assets/data-images/London-image.jpg"
+        "img": "https://www.publicdomainpictures.net/pictures/230000/nahled/london-cityscape.jpg"
     },
     {
-        "name": "Paris",
+        "cityName": "Paris",
         "country": "France",
-        "img": "src/assets/data-images/Paris-image.png"
+        "img": "https://c4.wallpaperflare.com/wallpaper/307/881/285/eiffel-tower-paris-france-wallpaper-preview.jpg"
     },
     {
-        "name": "Rome",
+        "cityName": "Rome",
         "country": "Italy",
-        "img": "src/assets/data-images/Rome-image.jpg"
+        "img": "https://cdn.pixabay.com/photo/2016/02/04/13/01/colosseum-1179159_960_720.jpg"
     },
     {
-        "name": "Sydney",
+        "cityName": "Sydney",
         "country": "Australia",
-        "img": "src/assets/data-images/Sydney-image.jpg"
+        "img": "https://th.bing.com/th/id/OIP.93I5x7vntNZ5eHLdFuwSvQHaE8?pid=ImgDet&rs=1"
     },
     {
-        "name": "Rio de Janeiro",
+        "cityName": "Rio de Janeiro",
         "country": "Brazil",
-        "img": "src/assets/data-images/Rio-image.jpg"
+        "img": "https://pixabay.com/static/uploads/photo/2015/06/14/23/35/rio-de-janeiro-809756_960_720.jpg"
     },
     {
-        "name": "Cairo",
+        "cityName": "Cairo",
         "country": "Egypt",
-        "img": "src/assets/data-images/Cairo-image.jpg"
+        "img": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fviajareaegipto.com%2Fel-cairo%2F&psig=AOvVaw24cdfY8rtooChxmzxXHD1d&ust=1692757838274000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCLC1rcSc74ADFQAAAAAdAAAAABAF"
     },
     {
-        "name": "Dubai",
+        "cityName": "Dubai",
         "country": "United Arab Emirates",
-        "img": "src/assets/data-images/Dubai-image.jpg"
+        "img": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.peakpx.com%2Fes%2Fhd-wallpaper-desktop-kmqga&psig=AOvVaw1PDdjS3LoovKMhEblyAVQ9&ust=1692757884610000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCKjAk9Wc74ADFQAAAAAdAAAAABAF"
     },
     {
-        "name": "Seoul",
+        "cityName": "Seoul",
         "country": "South Korea",
-        "img": "src/assets/data-images/Seoul-image.jpg"
+        "img": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pxfuel.com%2Fes%2Fdesktop-wallpaper-tvozu&psig=AOvVaw0fZeSshWRZQB0Svh-rbwW5&ust=1692757933484000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCMjao-yc74ADFQAAAAAdAAAAABAF"
     },
     {
-        "name": "Mar del Plata",
+        "cityName": "Mar del Plata",
         "country": "Argentina",
-        "img": "src/assets/data-images/MarDelPlata-image.jpg"
+        "img": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fintriper.com%2Fargentina-las-playas-de-mar-del-plata-podrian-volver-a-recibir-turistas-a-partir-de-septiembre%2F&psig=AOvVaw2eomOanEiYX5bg5HUZI-xY&ust=1692758083917000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCLCcibSd74ADFQAAAAAdAAAAABAJ"
     },
     {
-        "name": "Beijing",
+        "cityName": "Beijing",
         "country": "China",
-        "img": "src/assets/data-images/Beijing-image.jpg"
+        "img": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.voyage-prive.es%2Fppl%2Fviajes-china-beijing-paisajes-de-china%2F42233&psig=AOvVaw0OKhkoADu9GMJObdIDmybH&ust=1692758209748000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCOiRh_Cd74ADFQAAAAAdAAAAABAE"
     },
     {
-        "name": "Madrid",
+        "cityName": "Madrid",
         "country": "Spain",
-        "img": "src/assets/data-images/Madrid-image.jpg"
+        "img": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fmegustavolar.iberia.com%2F2021%2F09%2F09%2Fpaisaje-de-luz-celebrando-el-primer-patrimonio-mundial-de-madrid%2F&psig=AOvVaw32EtJ-3uDhDsr5t4TXSxs9&ust=1692758244446000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCMiuwICe74ADFQAAAAAdAAAAABAE"
     },
     {
-        "name": "Vancouver",
+        "cityName": "Vancouver",
         "country": "Canada",
-        "img": "src/assets/data-images/Vancouver-image.jpg"
+        "img": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fgrowproexperience.com%2Fcanada%2Fque-ver-en-vancouver%2F&psig=AOvVaw0d9Vwnz8pOEsmlS5_6GNWw&ust=1692758281650000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCKjNn5Ke74ADFQAAAAAdAAAAABAE"
     },
     {
-        "name": "Mexico City",
+        "cityName": "Mexico City",
         "country": "Mexico",
-        "img": "src/assets/data-images/MexicoCity-image.jpg"
+        "img": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pexels.com%2Fes-es%2Ffoto%2Ffoto-aerea-del-paisaje-de-la-ciudad-de-mexico-y-el-monumento-emblematico-de-la-ciudad-angel-de-la-independencia-al-atardecer-14071000%2F&psig=AOvVaw26EBPdPt_E73SKBjdhVXKH&ust=1692758315637000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCMjwwaKe74ADFQAAAAAdAAAAABAE"
     }
 ]
