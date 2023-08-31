@@ -1,5 +1,3 @@
-
-import '../models/Cities.js'
 import Cities from '../models/Cities.js';
 const citiesController = {
     getCities: async (req, res) => {
