@@ -6,6 +6,7 @@ const usersController ={
             const users = await Users.find();
             return res.status(200).json({
                 success: true,
+                message: "Users",
                 users
             })
         } catch (error) {
@@ -52,7 +53,7 @@ const usersController ={
     updateUser: async(req, res) => {
         try {
             const userId = req.params.id
-            const updatedUser = Users.findByIdAndUpdate(userId, req.body, {new: true})
+            const updatedUser = await Users.findByIdAndUpdate(userId, req.body, {new: true})
             return res.status(201).json({
                 success: true,
                 message: "User updated correctly",
