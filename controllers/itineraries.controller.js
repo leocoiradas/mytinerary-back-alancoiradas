@@ -23,7 +23,7 @@ const itinerariesController = {
 
     getItinerariesByCity: async (req, res) => {
         try {
-            const cityName = req.params.cityName
+            const cityName = req.params.city
             const itinerariesByCity = await Itineraries.find({city: cityName});
             return res.status(200).json({
                 success: true,
@@ -123,4 +123,6 @@ const itinerariesController = {
             })
         }
     }
-}
+};
+
+export default itinerariesController
