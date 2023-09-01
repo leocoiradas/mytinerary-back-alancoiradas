@@ -6,7 +6,9 @@ const itinerariesController = {
 
     getItineraries: async (req, res) => {
         try {
-            const itineraries = await Itineraries.find();
+            const itineraries = await Itineraries.find()
+            .populate("user")
+            .populate("city");
             return res.status(200).json({
                 success: true,
                 message: "Itineraries received correctly",
@@ -44,7 +46,9 @@ const itinerariesController = {
 
     getItineraryById: async (req, res) => {
         try {
-            const itineraryById = await Itineraries.findById(req.params._id);
+            const itineraryById = await Itineraries.findById(req.params._id)
+            .populate("user")
+            .populate("city");
             return res.status(200).json({
                 success: true,
                 message: "Itinerary found by id",
@@ -61,8 +65,11 @@ const itinerariesController = {
 
     createItinerary: async (req, res) => {
         try {
-            const currentUserId = await Users.findById(req.body._id);
-            const currentCityId = await Cities.findById(req.body._id);
+            console.log(req.body._id)
+            const currentUserId = await Users.findById(req.body.user);
+            const currentCityId = await Cities.findById(req.body.city);
+            //console.log(currentCityId)
+            //console.log(currentUserId)
             if (currentUserId === null || currentCityId === null) {
                 return res.status(404).json({
                     success: false,
@@ -70,6 +77,7 @@ const itinerariesController = {
                 })
             }
             const newItinerary = await Itineraries.create(req.body);
+            console.log(newItinerary)
             return res.status(200).json({
                 success: true,
                 message: "Itinerary succesfully created",
