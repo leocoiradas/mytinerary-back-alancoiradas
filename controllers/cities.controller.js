@@ -1,7 +1,8 @@
 import Cities from '../models/Cities.js';
+
 const citiesController = {
     getCities: async (req, res) => {
-        console.log(req.query)
+
        let searchQueries = {};
         if (req.query.cityName) {
             searchQueries.cityName = new RegExp(`^${req.query.cityName}`, 'i');
@@ -11,6 +12,14 @@ const citiesController = {
         }*/
         try {
             const citiesSearch = await Cities.find(searchQueries)
+            .populate({
+                path: "itineraries",
+                populate: {
+                    path: "user",
+                    model: "users"
+                }
+            })
+            
             if(citiesSearch.length > 0){
                 return res.status(200).json({
                     success: true,
@@ -33,11 +42,15 @@ const citiesController = {
 
     },
     getCityById: async (req, res) => {
-        console.log(req.query)
-        
         try {
             const eventById = await Cities.findById(req.params.id)
-
+            .populate({
+                path: "itineraries",
+                populate: {
+                    path: "user",
+                    model: "users"
+                }
+            })
             if(eventById){
                 return res.status(200).json({
                     success: true,
