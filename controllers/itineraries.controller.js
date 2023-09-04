@@ -7,8 +7,8 @@ const itinerariesController = {
     getItineraries: async (req, res) => {
         try {
             const itineraries = await Itineraries.find()
-            .populate("user")
-            .populate("city");
+                .populate("user", "username")
+                .populate("city", "cityName");
             return res.status(200).json({
                 success: true,
                 message: "Itineraries received correctly",
@@ -17,7 +17,7 @@ const itinerariesController = {
         } catch (error) {
             console.log(error);
             return res.status(404).json({
-                success: false, 
+                success: false,
                 message: "There was an error while getting the itineraries"
             })
         }
@@ -25,30 +25,40 @@ const itinerariesController = {
 
     getItinerariesByCity: async (req, res) => {
         try {
-            const cityName = req.params.city
-            const itinerariesByCity = await Itineraries.find({city: cityName});
-            return res.status(200).json({
+            const cityId = req.params.id;
+            const itinerariesByCity = await Itineraries.find({ city: cityId })
+            .populate("user", "username")
+            .populate("city", "cityName");
+
+            if(itinerariesByCity.length > 0){
+                return res.status(200).json({
+                    success: true,
+                    message: "Itineraries found by city",
+                    city: cityId,
+                    itinerariesByCity
+                })
+            }
+            return res.status(404).json({
                 success: true,
-                message: "Itineraries by city found",
-                city: cityName,
-                itinerariesByCity
+                message: "There is no itineraries in this city"
             })
-            
+
         } catch (error) {
             console.log(error)
             return res.status(404).json({
                 success: false,
-                message: "Itineraries not found with the city provided",
-                city: cityName
+                message: "Itineraries not found with the  provided city",
+                
             })
         }
-    }, 
+    },
 
     getItineraryById: async (req, res) => {
         try {
-            const itineraryById = await Itineraries.findById(req.params._id)
-            .populate("user")
-            .populate("city");
+            const itineraryById = await Itineraries.findById(req.params.id)
+            .populate("user", "username")
+            .populate("city", "cityName");
+            
             return res.status(200).json({
                 success: true,
                 message: "Itinerary found by id",
@@ -61,23 +71,20 @@ const itinerariesController = {
                 message: "Itinerary not found with the provided id"
             })
         }
-    }, 
+    },
 
     createItinerary: async (req, res) => {
         try {
-            console.log(req.body._id)
             const currentUserId = await Users.findById(req.body.user);
             const currentCityId = await Cities.findById(req.body.city);
-            //console.log(currentCityId)
-            //console.log(currentUserId)
-            if (currentUserId === null || currentCityId === null) {
+
+            if (!currentUserId || !currentCityId) {
                 return res.status(404).json({
                     success: false,
                     message: "We could not find an existing username or city. Please try again"
                 })
             }
             const newItinerary = await Itineraries.create(req.body);
-            console.log(newItinerary)
             return res.status(200).json({
                 success: true,
                 message: "Itinerary succesfully created",
@@ -91,16 +98,16 @@ const itinerariesController = {
             })
         }
     },
-    
+
     updateItinerary: async (req, res) => {
         const itineraryId = req.params._id
         try {
-           const updatedItinerary = await Itineraries.findByIdAndUpdate(itineraryId, req.body, {new: true}) ;
-           return res.status(201).json({
-            success: true,
-            message: "Itinerary succesfully updated",
-            updatedItinerary
-           })
+            const updatedItinerary = await Itineraries.findByIdAndUpdate(itineraryId, req.body, { new: true });
+            return res.status(201).json({
+                success: true,
+                message: "Itinerary succesfully updated",
+                updatedItinerary
+            })
         } catch (error) {
             console.log(error);
             return res.status(500).json({
@@ -108,24 +115,24 @@ const itinerariesController = {
                 message: "The itinerary could not be updated"
             })
         }
-    }, 
+    },
 
     deleteItinerary: async (req, res) => {
         try {
             const deletedItinerary = await Itineraries.findByIdAndDelete(req.params.id)
-            if (!deletedItinerary){
+            if (!deletedItinerary) {
                 return res.status(404).json({
                     success: false,
                     message: 'We could not find and delete the itinerary you are looking for'
                 })
             }
-           return res.status(200).json({
+            return res.status(200).json({
                 success: true,
                 message: 'Itinerary deleted succesfully'
             })
         } catch (error) {
             console.log(error)
-           return res.status(500).json({
+            return res.status(500).json({
                 success: false,
                 message: 'The itinerary could not be deleted'
             })
