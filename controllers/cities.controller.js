@@ -43,7 +43,7 @@ const citiesController = {
     },
     getCityById: async (req, res) => {
         try {
-            const eventById = await Cities.findById(req.params.id)
+            const cityById = await Cities.findById(req.params.id)
             .populate({
                 path: "itineraries",
                 populate: {
@@ -51,7 +51,7 @@ const citiesController = {
                     model: "users"
                 }
             })
-            if(eventById){
+            if(cityById){
                 return res.status(200).json({
                     success: true,
                     message: 'City found',
