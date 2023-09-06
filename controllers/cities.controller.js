@@ -55,7 +55,7 @@ const citiesController = {
                 return res.status(200).json({
                     success: true,
                     message: 'City found',
-                    eventById: eventById
+                    cityById: cityById
                 })
             }
 
