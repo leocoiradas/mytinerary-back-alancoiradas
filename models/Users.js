@@ -3,8 +3,14 @@ import { Schema, model } from "mongoose";
 const collection = "users";
 
 const schema = new Schema({
-    username: {type: String, required: true},
-    userImg: {type: String, required: true}
+    user: {type: String, required: true},
+    email: {type: String, required: true},
+    password: {type: String, required: true},
+    image: {type: String},
+    online: {type: Boolean, default: false},
+    verified: {type: Boolean, default: false},
+    verification_code: {type: String}
+    
 },{
     timestamps: true
 });
