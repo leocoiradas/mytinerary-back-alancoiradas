@@ -1,6 +1,6 @@
 import Joi from 'joi';
 
-export const createUserSchema = Joi.object({
+export const registerSchema = Joi.object({
     user: Joi.string()
         .required()
         .min(2)
@@ -48,3 +48,22 @@ export const createUserSchema = Joi.object({
             'string.uri': 'Image should be a valid URL.'
         })
 })
+
+export const loginSchema = Joi.object({
+    email: Joi.string()
+        .required()
+        .email({
+            minDomainSegments: 2
+        })
+        .messages({
+            'any.required': 'The email is required.',
+            'string.empty': 'It seems you forgot to write your email, please write it and try again.',
+            'string.email': 'Please type a valid email. ex: mail@domail.com'
+        }),
+    password: Joi.string()
+        .required()
+        .messages({
+            'any.required': 'Password is required.',
+            'string.empty': 'Please type a password for your account.',
+        }),
+});
