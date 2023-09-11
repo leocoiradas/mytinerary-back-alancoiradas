@@ -6,9 +6,10 @@ const schema = new Schema({
     user: {type: String, required: true},
     email: {type: String, required: true},
     password: {type: String, required: true},
-    image: {type: String},
+    country: {type: String, required: true},
+    image: {type: String, required: true},
     online: {type: Boolean, default: false},
-    verified: {type: Boolean, default: false},
+    verified: {type: Boolean, default: true},
     verification_code: {type: String}
     
 },{
