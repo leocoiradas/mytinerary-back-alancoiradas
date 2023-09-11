@@ -1,6 +1,6 @@
 import Users from "../../models/Users";
 
-export const accountExistsSingUp = async (req, res, next) => {
+export const accountExistsSignUp = async (req, res, next) => {
     const user = await Users.findOne({ email: req.body.email })
     if (user){
         return res.status(400).json({
@@ -10,3 +10,5 @@ export const accountExistsSingUp = async (req, res, next) => {
     }
     return next()
 }
+
+export default accountExistsSignUp

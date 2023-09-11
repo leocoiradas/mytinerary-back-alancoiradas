@@ -11,3 +11,4 @@ const passwordIsOk = async (req, res, next) => {
         message: 'Credentials does not match.'
     })
 }
+export default passwordIsOk

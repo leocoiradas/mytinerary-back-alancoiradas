@@ -7,3 +7,4 @@ const accountIsVerified = async (req, res, next) => {
         message: 'The account is not verified.'
     })
 }
+export default accountIsVerified

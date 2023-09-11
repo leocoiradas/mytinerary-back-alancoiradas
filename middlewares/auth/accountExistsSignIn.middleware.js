@@ -19,3 +19,5 @@ const accountExistsSignIn = async (req, res, next) => {
         message: 'The email does not match an existing account.'
     })
 }
+
+export default accountExistsSignIn
