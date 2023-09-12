@@ -1,6 +1,7 @@
 import Users from "../models/Users";
 import bcryptjs from 'bcryptjs';
 import crypto from 'crypto';
+import jwt from 'jsonwebtoken';
 
 const controller = {
     signup: async (req, res, next) => {
@@ -29,16 +30,47 @@ const controller = {
                 {online: true},
                 {new: true}
             )
+            const token = jwt.sign(
+                {
+                    id: user._id,
+                    email: user.email,
+                    name: user.name,
+                    photo: user.photo
+                },
+                process.env.SECRET,
+                {expiresIn: '12h'}
+            )
             user.password = null;
-            
+
             return res.status(200).json({
                 success: true,
-                message: 'Usuario logueado correctamente',
+                message: 'User logged successfully.',
+                token,
+                user
             })
 
         } catch (error) {
             console.log(error)
             return res.status(400).json({
+                success: false,
+                message: 'Error in autheticate'
+            })
+        }
+    },
+    signout: async (req, res, next) => {
+        try {
+            const user = await Users.findOneAndUpdate(
+                {email: req.user.email},
+                {online: false},
+                {new: true}
+            )
+
+            return res.status(200).json({
+                success: true,
+                message: 'User logout'
+            })
+        } catch (error) {
+            res.status(500).json({
                 success: false,
                 message: 'Error in autheticate'
             })
