@@ -6,8 +6,9 @@ import { accountIsVerified } from '../middlewares/auth/accountIsVerified.middlew
 import { passwordIsOk } from '../middlewares/auth/passwordIsOk.middleware.js';
 import { validator } from '../middlewares/validator.js';
 import { registerSchema, loginSchema } from '../schema/user.schema.js';
+import passport from '../middlewares/passport.js';
 
-const { signup, signin } = controller
+const { signup, signin, signout } = controller
 
 const router = express.Router()
 
@@ -25,6 +26,8 @@ router.post('/signup',
     accountExistsSignUp,
     signup
 )
+
+router.post('/signout', passport.authenticate('jwt', {session: false}), signout )
 
 export default router
 
