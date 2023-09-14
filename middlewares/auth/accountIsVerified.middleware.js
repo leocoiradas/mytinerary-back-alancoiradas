@@ -1,4 +1,4 @@
-const accountIsVerified = async (req, res, next) => {
+export const accountIsVerified = async (req, res, next) => {
     if (req.user.verified){
         return next()
     }
@@ -7,4 +7,4 @@ const accountIsVerified = async (req, res, next) => {
         message: 'The account is not verified.'
     })
 }
-export default accountIsVerified
+//export default accountIsVerified

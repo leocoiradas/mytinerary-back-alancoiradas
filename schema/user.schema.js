@@ -6,7 +6,7 @@ export const registerSchema = Joi.object({
         .min(2)
         .max(30)
         .messages({
-            'any.required': '',
+            'any.required': 'username is required',
             'string.min': 'username should have at least 2 characters.',
             'string.max': 'username should have less than 30 characters.',
             'string.empty': 'user field is empty, please write the username you want to have.'
@@ -35,7 +35,7 @@ export const registerSchema = Joi.object({
 
         }),
     country: Joi.string()
-        .required
+        .required()
         .messages({
             'any.required': 'Country is required.'
         }),

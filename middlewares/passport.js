@@ -1,4 +1,4 @@
-import User from "../models/User.js";
+import User from "../models/Users.js";
 import passport from 'passport';
 import { Strategy, ExtractJwt } from 'passport-jwt';
 
@@ -6,7 +6,7 @@ export default passport.use(
     new Strategy(
         {
             jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
-            secretOrKey: process.env.SECRET_TOKEN
+            secretOrKey: process.env.SECRET
         },
         async (jwt_payload, done) => {
             try {

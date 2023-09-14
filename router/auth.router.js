@@ -1,7 +1,7 @@
 import express from 'express'
 import controller from '../controllers/auth.controller.js';
 import { accountExistsSignUp } from '../middlewares/auth/accountExistsSignUp.middleware.js';
-import { accountExistSignIn } from '../middlewares/auth/accountExistsSignIn.middleware.js';
+import { accountExistsSignIn } from '../middlewares/auth/accountExistsSignIn.middleware.js';
 import { accountIsVerified } from '../middlewares/auth/accountIsVerified.middleware.js';
 import { passwordIsOk } from '../middlewares/auth/passwordIsOk.middleware.js';
 import { validator } from '../middlewares/validator.js';
@@ -14,7 +14,7 @@ const router = express.Router()
 
 router.post('/signin', 
     validator(loginSchema),
-    accountExistSignIn,
+    accountExistsSignIn,
     accountIsVerified, 
     passwordIsOk,
     signin

@@ -1,6 +1,6 @@
-import Users from "../../models/Users";
+import Users from "../../models/Users.js";
 
-const accountExistsSignIn = async (req, res, next) => {
+export const accountExistsSignIn = async (req, res, next) => {
     const user = await Users.findOne({ email: req.body.email })
     if (user){
         req.user = {
@@ -20,4 +20,4 @@ const accountExistsSignIn = async (req, res, next) => {
     })
 }
 
-export default accountExistsSignIn
+//export default accountExistsSignIn

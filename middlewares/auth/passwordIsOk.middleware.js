@@ -1,6 +1,6 @@
 import bcryptjs from 'bcryptjs';
 
-const passwordIsOk = async (req, res, next) => {
+export const passwordIsOk = async (req, res, next) => {
     const password_db = req.user.password
     const password_form = req.body.password
     if(bcryptjs.compareSync(password_form, password_db)){
@@ -11,4 +11,4 @@ const passwordIsOk = async (req, res, next) => {
         message: 'Credentials does not match.'
     })
 }
-export default passwordIsOk
+//export default passwordIsOk
