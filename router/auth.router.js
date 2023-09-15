@@ -8,7 +8,7 @@ import { validator } from '../middlewares/validator.js';
 import { registerSchema, loginSchema } from '../schema/user.schema.js';
 import passport from '../middlewares/passport.js';
 
-const { signup, signin, signout } = controller
+const { signup, signin, signout, token } = controller
 
 const router = express.Router()
 
@@ -28,6 +28,8 @@ router.post('/signup',
 )
 
 router.post('/signout', passport.authenticate('jwt', {session: false}), signout )
+
+router.post('/token', passport.authenticate('jwt', { session: false }), token)
 
 export default router
 
