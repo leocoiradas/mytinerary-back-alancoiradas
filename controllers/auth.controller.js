@@ -2,6 +2,7 @@ import Users from "../models/Users.js";
 import bcryptjs from 'bcryptjs';
 import crypto from 'crypto';
 import jwt from 'jsonwebtoken';
+import { verify } from '../helpers/google-verify.js';
 
 const controller = {
     signup: async (req, res, next) => {
@@ -60,7 +61,6 @@ const controller = {
 
     googleSignin: async (req, res, next) => {
         const { token_id } = req.body;
-
         try {
             
             const { name, email, photo } = await verify(token_id);
@@ -107,6 +107,7 @@ const controller = {
             })
 
         } catch (error) {
+            console.log(error)
             res.status(500).json({
                 success: false,
                 message: 'Error in authenticate with Google'
