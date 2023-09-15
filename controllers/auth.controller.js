@@ -57,6 +57,65 @@ const controller = {
             })
         }
     },
+    googleSignin: async (req, res, next) => {
+        const { token_id } = req.body;
+        //req.body.token_id
+        try {
+            
+            const { name, email, photo } = await verify(token_id);
+
+            let user = await Users.findOne({ email });
+
+            
+            if (!user) {
+                
+                const data = {
+                    name,
+                    email,
+                    photo,
+                    password: bcryptjs.hashSync(process.env.STANDARD_PASS, 10),
+                    google: true,
+                    verified_code: crypto.randomBytes(10).toString('hex')
+                }
+
+                user = await Users.create(data)
+            }
+
+            
+            user.online = true;
+            await user.save()
+
+            const token = jwt.sign(
+                {
+                    id: user._id,
+                    user: user.name,
+                    email: user.email,
+                    image: user.photo
+                },
+                process.env.SECRET_TOKEN,
+                { expiresIn: '10h' }
+            )
+
+            res.status(200).json({
+                success: true,
+                message: 'Logged in with Google',
+                response: {
+                    token,
+                    user: {
+                        name: user.name,
+                        email: user.email,
+                        photo: user.photo
+                    },
+                }
+            })
+
+        } catch (error) {
+            res.status(500).json({
+                success: false,
+                message: 'Error in authentication'
+            })
+        }
+    },
     signout: async (req, res, next) => {
         try {
             const user = await Users.findOneAndUpdate(
