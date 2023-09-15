@@ -95,7 +95,7 @@ const controller = {
 
             res.status(200).json({
                 success: true,
-                message: 'Usuario logueado correctamente con Google',
+                message: 'User logged with Google',
                 response: {
                     token,
                     user: {
@@ -109,7 +109,7 @@ const controller = {
         } catch (error) {
             res.status(500).json({
                 success: false,
-                message: 'Error al autenticar el usuario'
+                message: 'Error in authenticate with Google'
             })
         }
     },
