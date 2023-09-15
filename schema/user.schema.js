@@ -17,7 +17,7 @@ export const registerSchema = Joi.object({
         .email({
             minDomainSegments: 2
         })
-       .messages({
+        .messages({
             'any.required': 'The email is required.',
             'string.empty': 'It seems you forgot to write your email, please write it and try again.',
             'string.email': 'Please type a valid email. ex: mail@domail.com'
@@ -34,19 +34,20 @@ export const registerSchema = Joi.object({
             'string.max': 'Password should have less than 35 characters.',
 
         }),
-    country: Joi.string()
-        .required()
-        .messages({
-            'any.required': 'Country is required.'
-        }),
-    
+
+
     image: Joi.string()
         .required()
         .uri()
         .messages({
             'any.required': 'Image is required.',
             'string.uri': 'Image should be a valid URL.'
-        })
+        }),
+        country: Joi.string()
+        .required()
+        .messages({
+            'any.required': 'Country is required.'
+        }),    
 })
 
 export const loginSchema = Joi.object({
