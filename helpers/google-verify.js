@@ -9,10 +9,11 @@ export async function verify(token_id) {
     });
 
     const payload = ticket.getPayload();
-
-    return {
+    //console.log(payload)
+    return payload
+    /*return {
         user: payload.name,
         email: payload.email,
         image: payload.picture
-    }
+    }*/
 }
