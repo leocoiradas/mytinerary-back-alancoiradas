@@ -1,4 +1,4 @@
-import { Schema, model } from "mongoose";
+import { Schema, model, Types } from "mongoose";
 
 let collection = 'cities';
 
@@ -9,7 +9,8 @@ let citiesSchema = new Schema({
     desc: {type: String},
     touristSpots: {type: String},
     gastronomy: {type: String},
-    currency: {type: String}
+    currency: {type: String},
+    itineraries: [{type: Types.ObjectId, ref: 'itineraries'}]
 },{
     timestamps: true
 })
