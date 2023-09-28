@@ -7,7 +7,7 @@ const itinerariesController = {
     getItineraries: async (req, res) => {
         try {
             const itineraries = await Itineraries.find()
-                .populate("user", "username")
+                .populate("user", "user")
                 .populate("city", "cityName");
             return res.status(200).json({
                 success: true,
@@ -27,10 +27,10 @@ const itinerariesController = {
         try {
             const cityId = req.params.id;
             const itinerariesByCity = await Itineraries.find({ city: cityId })
-            .populate("user", "username")
-            .populate("city", "cityName");
+                .populate("user", "username")
+                .populate("city", "cityName");
 
-            if(itinerariesByCity.length > 0){
+            if (itinerariesByCity.length > 0) {
                 return res.status(200).json({
                     success: true,
                     message: "Itineraries found by city",
@@ -48,7 +48,7 @@ const itinerariesController = {
             return res.status(404).json({
                 success: false,
                 message: "Itineraries not found with the  provided city",
-                
+
             })
         }
     },
@@ -56,9 +56,9 @@ const itinerariesController = {
     getItineraryById: async (req, res) => {
         try {
             const itineraryById = await Itineraries.findById(req.params.id)
-            .populate("user", "username")
-            .populate("city", "cityName");
-            
+                .populate("user", "username")
+                .populate("city", "cityName");
+
             return res.status(200).json({
                 success: true,
                 message: "Itinerary found by id",
@@ -85,6 +85,13 @@ const itinerariesController = {
                 })
             }
             const newItinerary = await Itineraries.create(req.body);
+
+            const updatedCity = await Cities.findByIdAndUpdate(
+                req.body.city, // ID de la ciudad
+                { $push: { itineraries: newItinerary._id } },
+                { new: true }
+            );
+
             return res.status(200).json({
                 success: true,
                 message: "Itinerary succesfully created",
